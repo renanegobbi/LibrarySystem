@@ -1,0 +1,66 @@
+﻿@using SistemaBiblioteca.App.Mvc.Extensions
+@model SistemaBiblioteca.App.Mvc.ViewModels.LivroViewModel
+
+<div class="modal-block modal-block-primary app-modal-md modal-header-color">
+    <section class="panel">
+        <header class="panel-heading" style="background-color: #035785; margin: -1.5px;">
+            <h2 class="panel-title" style="color:white">Detalhes</h2>
+        </header>
+        <div class="panel-body">
+            <div id="form-manter-usuario" class="form-group">
+                <table class="table table-details" style="margin-bottom:-5px;">
+                    <tbody>
+                        <tr class="form-group">
+                            <th rowspan="4" style="width: 30%; border-top: none; text-align: center">
+                                <img src="/Imagens/@Model.Imagem" alt="@Model.Imagem" style="width: 70px; height: 100px;" />
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-details" style="margin-bottom:-5px;">
+                    <tbody>
+                        <tr>
+                            <th style="width: 30%; border-top: none;">Título:</th>
+                            <td>
+                                @Model.Titulo
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Descrição:</th>
+                            <td>
+                                @Model.Descricao
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Editora:</th>
+                            <td>
+                                @Model.Editora
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Data de publicação:</th>
+                            <td>
+                                @this.FormatarData(Model.AnoPublicacao)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Data de cadastro:</th>
+                            <td>
+                                @this.FormatarData(Model.DataCadastro)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <footer class="panel-footer">
+            <div class="row">
+                <div class="col-sm-12 text-right">
+                    <button class="btn btn-sm btn-default btn-fechar">
+                        <i class="fa fa-times mr-xs"></i> Fechar
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </section>
+</div>

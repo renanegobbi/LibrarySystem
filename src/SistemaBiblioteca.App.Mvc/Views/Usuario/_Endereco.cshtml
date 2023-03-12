@@ -1,0 +1,49 @@
+﻿@using SistemaBiblioteca.App.Mvc.Helpers
+@model SistemaBiblioteca.App.Mvc.ViewModels.UsuarioViewModel
+
+@{
+    var cadastro = Model == null || Model.Nome == null;
+}
+
+<div class="row">
+    <div class="col-sm-12 form-group">
+        <label class="control-label">Cep</label> @CustomHtmlHelper.CampoObrigatorio("Endereco_Cep")
+        <input type="text" class="form-control somenteNumero" id="Endereco_Cep" name="Endereco_Cep" value="@if(!cadastro){@Model.Endereco.Cep}" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 form-group">
+        <label class="control-label">Logradouro</label> @CustomHtmlHelper.CampoObrigatorio("Endereco_Logradouro")
+        <input type="text" class="form-control" id="Endereco_Logradouro" name="Endereco_Logradouro" value="@if(!cadastro){@Model.Endereco.Logradouro}" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 form-group">
+        <label class="control-label">Número</label> @CustomHtmlHelper.CampoObrigatorio("Endereco_Numero")
+        <input type="text" class="form-control somenteNumero" id="Endereco_Numero" name="Endereco_Numero" value="@if(!cadastro){@Model.Endereco.Numero}" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 form-group">
+        <label class="control-label">Complemento</label> @CustomHtmlHelper.CampoObrigatorio("Endereco_Complemento")
+        <input type="text" class="form-control" id="Endereco_Complemento" name="Endereco_Complemento" value="@if(!cadastro){@Model.Endereco.Complemento}" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 form-group">
+        <label class="control-label">Bairro</label> @CustomHtmlHelper.CampoObrigatorio("Endereco_Bairro")
+        <input type="text" class="form-control" id="Endereco_Bairro" name="Endereco_Bairro" value="@if(!cadastro){@Model.Endereco.Bairro}" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 form-group">
+        <label class="control-label">Cidade</label> @CustomHtmlHelper.CampoObrigatorio("Endereco_Cidade")
+        <input type="text" class="form-control" id="Endereco_Cidade" name="Endereco_Cidade" value="@if(!cadastro){@Model.Endereco.Cidade}" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 form-group">
+        <label class="control-label">Estado</label> @CustomHtmlHelper.CampoObrigatorio("Endereco_Estado")
+        <input type="text" class="form-control" id="Endereco_Estado" name="Endereco_Estado" value="@if(!cadastro){@Model.Endereco.Estado}" />
+    </div>
+</div>

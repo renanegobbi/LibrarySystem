@@ -1,0 +1,1027 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F18251FC-23C2-4AB1-9424-2E351E6E84AD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaBiblioteca.App.Mvc</RootNamespace>
+    <AssemblyName>SistemaBiblioteca.App.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44397</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.10.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SimpleInjector, Version=5.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SimpleInjector.5.0.0\lib\net461\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SimpleInjector.Integration.Web.5.0.0\lib\net45\SimpleInjector.Integration.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SimpleInjector.Integration.Web.Mvc.5.0.0\lib\net45\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\..\packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Facebook.4.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Cookies.4.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Google.4.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Twitter.4.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.OAuth.4.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\DependencyInjectionConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\EmprestimoController.cs" />
+    <Compile Include="Controllers\LivroController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Extensions\CustomAuthorization.cs" />
+    <Compile Include="Extensions\EnumeratorsExtensions.cs" />
+    <Compile Include="Extensions\RazorExtensions.cs" />
+    <Compile Include="Feedback.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CustomHtmlHelper.cs" />
+    <Compile Include="Helpers\DatatablesHelper.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Results\DatatablesResult.cs" />
+    <Compile Include="Results\FeedbackResult.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\EmprestimoViewModel.cs" />
+    <Compile Include="ViewModels\EnderecoViewModel.cs" />
+    <Compile Include="ViewModels\LivroViewModel.cs" />
+    <Compile Include="ViewModels\ErrorViewModel.cs" />
+    <Compile Include="ViewModels\UsuarioViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Imagens\0283C6C0-9F6B-42A6-BFFD-BAC1C7BAC4A4_DomainDrivenDesign.jpg" />
+    <Content Include="Imagens\09303E33-5F0D-4F9B-A5AF-48D6B1BC83F7_Refactoring.jpg" />
+    <Content Include="Imagens\8F1139FD-37DF-41D9-A21C-80EC214D3B75_CleanCode.jpg" />
+    <Content Include="Imagens\9DC7068D-AB05-4E9D-BD90-805DAEDE65D8_DesignPatterns.jpg" />
+    <Content Include="Imagens\AC8B9091-DC10-45AD-A27C-405FBE2E4826_CleanArchitecture.jpg" />
+    <Content Include="Imagens\C8F0E891-BED5-43ED-9AAE-28C17C28A8FB_PatternsOfEnterprise.jpg" />
+    <Content Include="Imagens\Livro.jpg" />
+    <Content Include="Scripts\bootstrap-datepicker\css\bootstrap-datepicker.css" />
+    <Content Include="Scripts\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
+    <Content Include="Scripts\bootstrap-datepicker\css\bootstrap-datepicker.standalone.css" />
+    <Content Include="Scripts\bootstrap-datepicker\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="Scripts\bootstrap-datepicker\css\bootstrap-datepicker3.css" />
+    <Content Include="Scripts\bootstrap-datepicker\css\bootstrap-datepicker3.min.css" />
+    <Content Include="Scripts\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.css" />
+    <Content Include="Scripts\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="Scripts\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap-datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker-en-CA.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ar-tn.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.bm.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.bn.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.br.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.en-AU.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.en-CA.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.en-IE.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.en-NZ.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.en-ZA.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.hi.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.km.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.oc.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.si.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ta.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.tg.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.tk.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.uz-cyrl.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.uz-latn.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\datepicker\datepicker.common.js" />
+    <Content Include="Scripts\datepicker\datepicker.common.min.js" />
+    <Content Include="Scripts\datepicker\datepicker.css" />
+    <Content Include="Scripts\datepicker\datepicker.esm.js" />
+    <Content Include="Scripts\datepicker\datepicker.esm.min.js" />
+    <Content Include="Scripts\datepicker\datepicker.js" />
+    <Content Include="Scripts\datepicker\datepicker.min.css" />
+    <Content Include="Scripts\datepicker\datepicker.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ar-AE.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ar-AE.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ar-IQ.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ar-IQ.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ca-ES.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ca-ES.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.cs-CZ.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.cs-CZ.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.da-DK.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.da-DK.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.de-AT.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.de-AT.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.de-DE.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.de-DE.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.el-GR.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.el-GR.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.en-GB.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.en-GB.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.en-US.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.en-US.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.es-ES.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.es-ES.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.fi-FI.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.fi-FI.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.fr-FR.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.fr-FR.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.hu-HU.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.hu-HU.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.is-IS.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.is-IS.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.it-IT.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.it-IT.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ja-JP.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ja-JP.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.km-KH.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.km-KH.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ko-KR.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ko-KR.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.lt-LT.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.lt-LT.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.lv-LV.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.lv-LV.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.nb-NO.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.nb-NO.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.nl-NL.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.nl-NL.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.oc-FR.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.oc-FR.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.pl-PL.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.pl-PL.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.pt-BR.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.pt-BR.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ro-RO.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ro-RO.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ru-RU.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ru-RU.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.si-LK.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.si-LK.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.sk-SK.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.sk-SK.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.sl-SI.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.sl-SI.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.sv-SE.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.sv-SE.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ta-TA.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ta-TA.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.th-TH.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.th-TH.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.tr-TR.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.tr-TR.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ug-CN.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.ug-CN.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.uk-UA.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.uk-UA.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.vi-VN.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.vi-VN.min.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.zh-CN.js" />
+    <Content Include="Scripts\datepicker\i18n\datepicker.zh-CN.min.js" />
+    <Content Include="Scripts\font-awesome\css\all.css" />
+    <Content Include="Scripts\font-awesome\css\all.min.css" />
+    <Content Include="Scripts\font-awesome\css\brands.css" />
+    <Content Include="Scripts\font-awesome\css\brands.min.css" />
+    <Content Include="Scripts\font-awesome\css\fontawesome.css" />
+    <Content Include="Scripts\font-awesome\css\fontawesome.min.css" />
+    <Content Include="Scripts\font-awesome\css\regular.css" />
+    <Content Include="Scripts\font-awesome\css\regular.min.css" />
+    <Content Include="Scripts\font-awesome\css\solid.css" />
+    <Content Include="Scripts\font-awesome\css\solid.min.css" />
+    <Content Include="Scripts\font-awesome\css\svg-with-js.css" />
+    <Content Include="Scripts\font-awesome\css\svg-with-js.min.css" />
+    <Content Include="Scripts\font-awesome\css\v4-font-face.css" />
+    <Content Include="Scripts\font-awesome\css\v4-font-face.min.css" />
+    <Content Include="Scripts\font-awesome\css\v4-shims.css" />
+    <Content Include="Scripts\font-awesome\css\v4-shims.min.css" />
+    <Content Include="Scripts\font-awesome\css\v5-font-face.css" />
+    <Content Include="Scripts\font-awesome\css\v5-font-face.min.css" />
+    <Content Include="Scripts\font-awesome\js\all.js" />
+    <Content Include="Scripts\font-awesome\js\all.min.js" />
+    <Content Include="Scripts\font-awesome\js\brands.js" />
+    <Content Include="Scripts\font-awesome\js\brands.min.js" />
+    <Content Include="Scripts\font-awesome\js\conflict-detection.js" />
+    <Content Include="Scripts\font-awesome\js\conflict-detection.min.js" />
+    <Content Include="Scripts\font-awesome\js\fontawesome.js" />
+    <Content Include="Scripts\font-awesome\js\fontawesome.min.js" />
+    <Content Include="Scripts\font-awesome\js\regular.js" />
+    <Content Include="Scripts\font-awesome\js\regular.min.js" />
+    <Content Include="Scripts\font-awesome\js\solid.js" />
+    <Content Include="Scripts\font-awesome\js\solid.min.js" />
+    <Content Include="Scripts\font-awesome\js\v4-shims.js" />
+    <Content Include="Scripts\font-awesome\js\v4-shims.min.js" />
+    <Content Include="Scripts\font-awesome\sprites\brands.svg" />
+    <Content Include="Scripts\font-awesome\sprites\regular.svg" />
+    <Content Include="Scripts\font-awesome\sprites\solid.svg" />
+    <Content Include="Scripts\jquery-confirm\jquery-confirm.min.css" />
+    <Content Include="Scripts\jquery-confirm\jquery-confirm.min.js" />
+    <Content Include="Scripts\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="Scripts\jquery-validation\dist\additional-methods.js" />
+    <Content Include="Scripts\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="Scripts\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="Scripts\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.blockUI\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.blockUI\jquery.blockUI.min.js" />
+    <Content Include="Scripts\jquery.inputmask.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery\dist\jquery.js" />
+    <Content Include="Scripts\jquery\dist\jquery.min.js" />
+    <Content Include="Scripts\jquery\LICENSE.txt" />
+    <Content Include="Scripts\moment.js\locale\af.js" />
+    <Content Include="Scripts\moment.js\locale\af.min.js" />
+    <Content Include="Scripts\moment.js\locale\ar-dz.js" />
+    <Content Include="Scripts\moment.js\locale\ar-dz.min.js" />
+    <Content Include="Scripts\moment.js\locale\ar-kw.js" />
+    <Content Include="Scripts\moment.js\locale\ar-kw.min.js" />
+    <Content Include="Scripts\moment.js\locale\ar-ly.js" />
+    <Content Include="Scripts\moment.js\locale\ar-ly.min.js" />
+    <Content Include="Scripts\moment.js\locale\ar-ma.js" />
+    <Content Include="Scripts\moment.js\locale\ar-ma.min.js" />
+    <Content Include="Scripts\moment.js\locale\ar-sa.js" />
+    <Content Include="Scripts\moment.js\locale\ar-sa.min.js" />
+    <Content Include="Scripts\moment.js\locale\ar-tn.js" />
+    <Content Include="Scripts\moment.js\locale\ar-tn.min.js" />
+    <Content Include="Scripts\moment.js\locale\ar.js" />
+    <Content Include="Scripts\moment.js\locale\ar.min.js" />
+    <Content Include="Scripts\moment.js\locale\az.js" />
+    <Content Include="Scripts\moment.js\locale\az.min.js" />
+    <Content Include="Scripts\moment.js\locale\be.js" />
+    <Content Include="Scripts\moment.js\locale\be.min.js" />
+    <Content Include="Scripts\moment.js\locale\bg.js" />
+    <Content Include="Scripts\moment.js\locale\bg.min.js" />
+    <Content Include="Scripts\moment.js\locale\bm.js" />
+    <Content Include="Scripts\moment.js\locale\bm.min.js" />
+    <Content Include="Scripts\moment.js\locale\bn-bd.js" />
+    <Content Include="Scripts\moment.js\locale\bn-bd.min.js" />
+    <Content Include="Scripts\moment.js\locale\bn.js" />
+    <Content Include="Scripts\moment.js\locale\bn.min.js" />
+    <Content Include="Scripts\moment.js\locale\bo.js" />
+    <Content Include="Scripts\moment.js\locale\bo.min.js" />
+    <Content Include="Scripts\moment.js\locale\br.js" />
+    <Content Include="Scripts\moment.js\locale\br.min.js" />
+    <Content Include="Scripts\moment.js\locale\bs.js" />
+    <Content Include="Scripts\moment.js\locale\bs.min.js" />
+    <Content Include="Scripts\moment.js\locale\ca.js" />
+    <Content Include="Scripts\moment.js\locale\ca.min.js" />
+    <Content Include="Scripts\moment.js\locale\cs.js" />
+    <Content Include="Scripts\moment.js\locale\cs.min.js" />
+    <Content Include="Scripts\moment.js\locale\cv.js" />
+    <Content Include="Scripts\moment.js\locale\cv.min.js" />
+    <Content Include="Scripts\moment.js\locale\cy.js" />
+    <Content Include="Scripts\moment.js\locale\cy.min.js" />
+    <Content Include="Scripts\moment.js\locale\da.js" />
+    <Content Include="Scripts\moment.js\locale\da.min.js" />
+    <Content Include="Scripts\moment.js\locale\de-at.js" />
+    <Content Include="Scripts\moment.js\locale\de-at.min.js" />
+    <Content Include="Scripts\moment.js\locale\de-ch.js" />
+    <Content Include="Scripts\moment.js\locale\de-ch.min.js" />
+    <Content Include="Scripts\moment.js\locale\de.js" />
+    <Content Include="Scripts\moment.js\locale\de.min.js" />
+    <Content Include="Scripts\moment.js\locale\dv.js" />
+    <Content Include="Scripts\moment.js\locale\dv.min.js" />
+    <Content Include="Scripts\moment.js\locale\el.js" />
+    <Content Include="Scripts\moment.js\locale\el.min.js" />
+    <Content Include="Scripts\moment.js\locale\en-au.js" />
+    <Content Include="Scripts\moment.js\locale\en-au.min.js" />
+    <Content Include="Scripts\moment.js\locale\en-ca.js" />
+    <Content Include="Scripts\moment.js\locale\en-ca.min.js" />
+    <Content Include="Scripts\moment.js\locale\en-gb.js" />
+    <Content Include="Scripts\moment.js\locale\en-gb.min.js" />
+    <Content Include="Scripts\moment.js\locale\en-ie.js" />
+    <Content Include="Scripts\moment.js\locale\en-ie.min.js" />
+    <Content Include="Scripts\moment.js\locale\en-il.js" />
+    <Content Include="Scripts\moment.js\locale\en-il.min.js" />
+    <Content Include="Scripts\moment.js\locale\en-in.js" />
+    <Content Include="Scripts\moment.js\locale\en-in.min.js" />
+    <Content Include="Scripts\moment.js\locale\en-nz.js" />
+    <Content Include="Scripts\moment.js\locale\en-nz.min.js" />
+    <Content Include="Scripts\moment.js\locale\en-sg.js" />
+    <Content Include="Scripts\moment.js\locale\en-sg.min.js" />
+    <Content Include="Scripts\moment.js\locale\eo.js" />
+    <Content Include="Scripts\moment.js\locale\eo.min.js" />
+    <Content Include="Scripts\moment.js\locale\es-do.js" />
+    <Content Include="Scripts\moment.js\locale\es-do.min.js" />
+    <Content Include="Scripts\moment.js\locale\es-mx.js" />
+    <Content Include="Scripts\moment.js\locale\es-mx.min.js" />
+    <Content Include="Scripts\moment.js\locale\es-us.js" />
+    <Content Include="Scripts\moment.js\locale\es-us.min.js" />
+    <Content Include="Scripts\moment.js\locale\es.js" />
+    <Content Include="Scripts\moment.js\locale\es.min.js" />
+    <Content Include="Scripts\moment.js\locale\et.js" />
+    <Content Include="Scripts\moment.js\locale\et.min.js" />
+    <Content Include="Scripts\moment.js\locale\eu.js" />
+    <Content Include="Scripts\moment.js\locale\eu.min.js" />
+    <Content Include="Scripts\moment.js\locale\fa.js" />
+    <Content Include="Scripts\moment.js\locale\fa.min.js" />
+    <Content Include="Scripts\moment.js\locale\fi.js" />
+    <Content Include="Scripts\moment.js\locale\fi.min.js" />
+    <Content Include="Scripts\moment.js\locale\fil.js" />
+    <Content Include="Scripts\moment.js\locale\fil.min.js" />
+    <Content Include="Scripts\moment.js\locale\fo.js" />
+    <Content Include="Scripts\moment.js\locale\fo.min.js" />
+    <Content Include="Scripts\moment.js\locale\fr-ca.js" />
+    <Content Include="Scripts\moment.js\locale\fr-ca.min.js" />
+    <Content Include="Scripts\moment.js\locale\fr-ch.js" />
+    <Content Include="Scripts\moment.js\locale\fr-ch.min.js" />
+    <Content Include="Scripts\moment.js\locale\fr.js" />
+    <Content Include="Scripts\moment.js\locale\fr.min.js" />
+    <Content Include="Scripts\moment.js\locale\fy.js" />
+    <Content Include="Scripts\moment.js\locale\fy.min.js" />
+    <Content Include="Scripts\moment.js\locale\ga.js" />
+    <Content Include="Scripts\moment.js\locale\ga.min.js" />
+    <Content Include="Scripts\moment.js\locale\gd.js" />
+    <Content Include="Scripts\moment.js\locale\gd.min.js" />
+    <Content Include="Scripts\moment.js\locale\gl.js" />
+    <Content Include="Scripts\moment.js\locale\gl.min.js" />
+    <Content Include="Scripts\moment.js\locale\gom-deva.js" />
+    <Content Include="Scripts\moment.js\locale\gom-deva.min.js" />
+    <Content Include="Scripts\moment.js\locale\gom-latn.js" />
+    <Content Include="Scripts\moment.js\locale\gom-latn.min.js" />
+    <Content Include="Scripts\moment.js\locale\gu.js" />
+    <Content Include="Scripts\moment.js\locale\gu.min.js" />
+    <Content Include="Scripts\moment.js\locale\he.js" />
+    <Content Include="Scripts\moment.js\locale\he.min.js" />
+    <Content Include="Scripts\moment.js\locale\hi.js" />
+    <Content Include="Scripts\moment.js\locale\hi.min.js" />
+    <Content Include="Scripts\moment.js\locale\hr.js" />
+    <Content Include="Scripts\moment.js\locale\hr.min.js" />
+    <Content Include="Scripts\moment.js\locale\hu.js" />
+    <Content Include="Scripts\moment.js\locale\hu.min.js" />
+    <Content Include="Scripts\moment.js\locale\hy-am.js" />
+    <Content Include="Scripts\moment.js\locale\hy-am.min.js" />
+    <Content Include="Scripts\moment.js\locale\id.js" />
+    <Content Include="Scripts\moment.js\locale\id.min.js" />
+    <Content Include="Scripts\moment.js\locale\is.js" />
+    <Content Include="Scripts\moment.js\locale\is.min.js" />
+    <Content Include="Scripts\moment.js\locale\it-ch.js" />
+    <Content Include="Scripts\moment.js\locale\it-ch.min.js" />
+    <Content Include="Scripts\moment.js\locale\it.js" />
+    <Content Include="Scripts\moment.js\locale\it.min.js" />
+    <Content Include="Scripts\moment.js\locale\ja.js" />
+    <Content Include="Scripts\moment.js\locale\ja.min.js" />
+    <Content Include="Scripts\moment.js\locale\jv.js" />
+    <Content Include="Scripts\moment.js\locale\jv.min.js" />
+    <Content Include="Scripts\moment.js\locale\ka.js" />
+    <Content Include="Scripts\moment.js\locale\ka.min.js" />
+    <Content Include="Scripts\moment.js\locale\kk.js" />
+    <Content Include="Scripts\moment.js\locale\kk.min.js" />
+    <Content Include="Scripts\moment.js\locale\km.js" />
+    <Content Include="Scripts\moment.js\locale\km.min.js" />
+    <Content Include="Scripts\moment.js\locale\kn.js" />
+    <Content Include="Scripts\moment.js\locale\kn.min.js" />
+    <Content Include="Scripts\moment.js\locale\ko.js" />
+    <Content Include="Scripts\moment.js\locale\ko.min.js" />
+    <Content Include="Scripts\moment.js\locale\ku.js" />
+    <Content Include="Scripts\moment.js\locale\ku.min.js" />
+    <Content Include="Scripts\moment.js\locale\ky.js" />
+    <Content Include="Scripts\moment.js\locale\ky.min.js" />
+    <Content Include="Scripts\moment.js\locale\lb.js" />
+    <Content Include="Scripts\moment.js\locale\lb.min.js" />
+    <Content Include="Scripts\moment.js\locale\lo.js" />
+    <Content Include="Scripts\moment.js\locale\lo.min.js" />
+    <Content Include="Scripts\moment.js\locale\lt.js" />
+    <Content Include="Scripts\moment.js\locale\lt.min.js" />
+    <Content Include="Scripts\moment.js\locale\lv.js" />
+    <Content Include="Scripts\moment.js\locale\lv.min.js" />
+    <Content Include="Scripts\moment.js\locale\me.js" />
+    <Content Include="Scripts\moment.js\locale\me.min.js" />
+    <Content Include="Scripts\moment.js\locale\mi.js" />
+    <Content Include="Scripts\moment.js\locale\mi.min.js" />
+    <Content Include="Scripts\moment.js\locale\mk.js" />
+    <Content Include="Scripts\moment.js\locale\mk.min.js" />
+    <Content Include="Scripts\moment.js\locale\ml.js" />
+    <Content Include="Scripts\moment.js\locale\ml.min.js" />
+    <Content Include="Scripts\moment.js\locale\mn.js" />
+    <Content Include="Scripts\moment.js\locale\mn.min.js" />
+    <Content Include="Scripts\moment.js\locale\mr.js" />
+    <Content Include="Scripts\moment.js\locale\mr.min.js" />
+    <Content Include="Scripts\moment.js\locale\ms-my.js" />
+    <Content Include="Scripts\moment.js\locale\ms-my.min.js" />
+    <Content Include="Scripts\moment.js\locale\ms.js" />
+    <Content Include="Scripts\moment.js\locale\ms.min.js" />
+    <Content Include="Scripts\moment.js\locale\mt.js" />
+    <Content Include="Scripts\moment.js\locale\mt.min.js" />
+    <Content Include="Scripts\moment.js\locale\my.js" />
+    <Content Include="Scripts\moment.js\locale\my.min.js" />
+    <Content Include="Scripts\moment.js\locale\nb.js" />
+    <Content Include="Scripts\moment.js\locale\nb.min.js" />
+    <Content Include="Scripts\moment.js\locale\ne.js" />
+    <Content Include="Scripts\moment.js\locale\ne.min.js" />
+    <Content Include="Scripts\moment.js\locale\nl-be.js" />
+    <Content Include="Scripts\moment.js\locale\nl-be.min.js" />
+    <Content Include="Scripts\moment.js\locale\nl.js" />
+    <Content Include="Scripts\moment.js\locale\nl.min.js" />
+    <Content Include="Scripts\moment.js\locale\nn.js" />
+    <Content Include="Scripts\moment.js\locale\nn.min.js" />
+    <Content Include="Scripts\moment.js\locale\oc-lnc.js" />
+    <Content Include="Scripts\moment.js\locale\oc-lnc.min.js" />
+    <Content Include="Scripts\moment.js\locale\pa-in.js" />
+    <Content Include="Scripts\moment.js\locale\pa-in.min.js" />
+    <Content Include="Scripts\moment.js\locale\pl.js" />
+    <Content Include="Scripts\moment.js\locale\pl.min.js" />
+    <Content Include="Scripts\moment.js\locale\pt-br.js" />
+    <Content Include="Scripts\moment.js\locale\pt-br.min.js" />
+    <Content Include="Scripts\moment.js\locale\pt.js" />
+    <Content Include="Scripts\moment.js\locale\pt.min.js" />
+    <Content Include="Scripts\moment.js\locale\ro.js" />
+    <Content Include="Scripts\moment.js\locale\ro.min.js" />
+    <Content Include="Scripts\moment.js\locale\ru.js" />
+    <Content Include="Scripts\moment.js\locale\ru.min.js" />
+    <Content Include="Scripts\moment.js\locale\sd.js" />
+    <Content Include="Scripts\moment.js\locale\sd.min.js" />
+    <Content Include="Scripts\moment.js\locale\se.js" />
+    <Content Include="Scripts\moment.js\locale\se.min.js" />
+    <Content Include="Scripts\moment.js\locale\si.js" />
+    <Content Include="Scripts\moment.js\locale\si.min.js" />
+    <Content Include="Scripts\moment.js\locale\sk.js" />
+    <Content Include="Scripts\moment.js\locale\sk.min.js" />
+    <Content Include="Scripts\moment.js\locale\sl.js" />
+    <Content Include="Scripts\moment.js\locale\sl.min.js" />
+    <Content Include="Scripts\moment.js\locale\sq.js" />
+    <Content Include="Scripts\moment.js\locale\sq.min.js" />
+    <Content Include="Scripts\moment.js\locale\sr-cyrl.js" />
+    <Content Include="Scripts\moment.js\locale\sr-cyrl.min.js" />
+    <Content Include="Scripts\moment.js\locale\sr.js" />
+    <Content Include="Scripts\moment.js\locale\sr.min.js" />
+    <Content Include="Scripts\moment.js\locale\ss.js" />
+    <Content Include="Scripts\moment.js\locale\ss.min.js" />
+    <Content Include="Scripts\moment.js\locale\sv.js" />
+    <Content Include="Scripts\moment.js\locale\sv.min.js" />
+    <Content Include="Scripts\moment.js\locale\sw.js" />
+    <Content Include="Scripts\moment.js\locale\sw.min.js" />
+    <Content Include="Scripts\moment.js\locale\ta.js" />
+    <Content Include="Scripts\moment.js\locale\ta.min.js" />
+    <Content Include="Scripts\moment.js\locale\te.js" />
+    <Content Include="Scripts\moment.js\locale\te.min.js" />
+    <Content Include="Scripts\moment.js\locale\tet.js" />
+    <Content Include="Scripts\moment.js\locale\tet.min.js" />
+    <Content Include="Scripts\moment.js\locale\tg.js" />
+    <Content Include="Scripts\moment.js\locale\tg.min.js" />
+    <Content Include="Scripts\moment.js\locale\th.js" />
+    <Content Include="Scripts\moment.js\locale\th.min.js" />
+    <Content Include="Scripts\moment.js\locale\tk.js" />
+    <Content Include="Scripts\moment.js\locale\tk.min.js" />
+    <Content Include="Scripts\moment.js\locale\tl-ph.js" />
+    <Content Include="Scripts\moment.js\locale\tl-ph.min.js" />
+    <Content Include="Scripts\moment.js\locale\tlh.js" />
+    <Content Include="Scripts\moment.js\locale\tlh.min.js" />
+    <Content Include="Scripts\moment.js\locale\tr.js" />
+    <Content Include="Scripts\moment.js\locale\tr.min.js" />
+    <Content Include="Scripts\moment.js\locale\tzl.js" />
+    <Content Include="Scripts\moment.js\locale\tzl.min.js" />
+    <Content Include="Scripts\moment.js\locale\tzm-latn.js" />
+    <Content Include="Scripts\moment.js\locale\tzm-latn.min.js" />
+    <Content Include="Scripts\moment.js\locale\tzm.js" />
+    <Content Include="Scripts\moment.js\locale\tzm.min.js" />
+    <Content Include="Scripts\moment.js\locale\ug-cn.js" />
+    <Content Include="Scripts\moment.js\locale\ug-cn.min.js" />
+    <Content Include="Scripts\moment.js\locale\uk.js" />
+    <Content Include="Scripts\moment.js\locale\uk.min.js" />
+    <Content Include="Scripts\moment.js\locale\ur.js" />
+    <Content Include="Scripts\moment.js\locale\ur.min.js" />
+    <Content Include="Scripts\moment.js\locale\uz-latn.js" />
+    <Content Include="Scripts\moment.js\locale\uz-latn.min.js" />
+    <Content Include="Scripts\moment.js\locale\uz.js" />
+    <Content Include="Scripts\moment.js\locale\uz.min.js" />
+    <Content Include="Scripts\moment.js\locale\vi.js" />
+    <Content Include="Scripts\moment.js\locale\vi.min.js" />
+    <Content Include="Scripts\moment.js\locale\x-pseudo.js" />
+    <Content Include="Scripts\moment.js\locale\x-pseudo.min.js" />
+    <Content Include="Scripts\moment.js\locale\yo.js" />
+    <Content Include="Scripts\moment.js\locale\yo.min.js" />
+    <Content Include="Scripts\moment.js\locale\zh-cn.js" />
+    <Content Include="Scripts\moment.js\locale\zh-cn.min.js" />
+    <Content Include="Scripts\moment.js\locale\zh-hk.js" />
+    <Content Include="Scripts\moment.js\locale\zh-hk.min.js" />
+    <Content Include="Scripts\moment.js\locale\zh-mo.js" />
+    <Content Include="Scripts\moment.js\locale\zh-mo.min.js" />
+    <Content Include="Scripts\moment.js\locale\zh-tw.js" />
+    <Content Include="Scripts\moment.js\locale\zh-tw.min.js" />
+    <Content Include="Scripts\moment.js\moment-with-locales.js" />
+    <Content Include="Scripts\moment.js\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js\moment.js" />
+    <Content Include="Scripts\moment.js\moment.min.js" />
+    <Content Include="Scripts\select2\css\select2.css" />
+    <Content Include="Scripts\select2\css\select2.min.css" />
+    <Content Include="Scripts\select2\js\i18n\af.js" />
+    <Content Include="Scripts\select2\js\i18n\af.min.js" />
+    <Content Include="Scripts\select2\js\i18n\ar.js" />
+    <Content Include="Scripts\select2\js\i18n\ar.min.js" />
+    <Content Include="Scripts\select2\js\i18n\az.js" />
+    <Content Include="Scripts\select2\js\i18n\az.min.js" />
+    <Content Include="Scripts\select2\js\i18n\bg.js" />
+    <Content Include="Scripts\select2\js\i18n\bg.min.js" />
+    <Content Include="Scripts\select2\js\i18n\bn.js" />
+    <Content Include="Scripts\select2\js\i18n\bn.min.js" />
+    <Content Include="Scripts\select2\js\i18n\bs.js" />
+    <Content Include="Scripts\select2\js\i18n\bs.min.js" />
+    <Content Include="Scripts\select2\js\i18n\ca.js" />
+    <Content Include="Scripts\select2\js\i18n\ca.min.js" />
+    <Content Include="Scripts\select2\js\i18n\cs.js" />
+    <Content Include="Scripts\select2\js\i18n\cs.min.js" />
+    <Content Include="Scripts\select2\js\i18n\da.js" />
+    <Content Include="Scripts\select2\js\i18n\da.min.js" />
+    <Content Include="Scripts\select2\js\i18n\de.js" />
+    <Content Include="Scripts\select2\js\i18n\de.min.js" />
+    <Content Include="Scripts\select2\js\i18n\dsb.js" />
+    <Content Include="Scripts\select2\js\i18n\dsb.min.js" />
+    <Content Include="Scripts\select2\js\i18n\el.js" />
+    <Content Include="Scripts\select2\js\i18n\el.min.js" />
+    <Content Include="Scripts\select2\js\i18n\en.js" />
+    <Content Include="Scripts\select2\js\i18n\en.min.js" />
+    <Content Include="Scripts\select2\js\i18n\es.js" />
+    <Content Include="Scripts\select2\js\i18n\es.min.js" />
+    <Content Include="Scripts\select2\js\i18n\et.js" />
+    <Content Include="Scripts\select2\js\i18n\et.min.js" />
+    <Content Include="Scripts\select2\js\i18n\eu.js" />
+    <Content Include="Scripts\select2\js\i18n\eu.min.js" />
+    <Content Include="Scripts\select2\js\i18n\fa.js" />
+    <Content Include="Scripts\select2\js\i18n\fa.min.js" />
+    <Content Include="Scripts\select2\js\i18n\fi.js" />
+    <Content Include="Scripts\select2\js\i18n\fi.min.js" />
+    <Content Include="Scripts\select2\js\i18n\fr.js" />
+    <Content Include="Scripts\select2\js\i18n\fr.min.js" />
+    <Content Include="Scripts\select2\js\i18n\gl.js" />
+    <Content Include="Scripts\select2\js\i18n\gl.min.js" />
+    <Content Include="Scripts\select2\js\i18n\he.js" />
+    <Content Include="Scripts\select2\js\i18n\he.min.js" />
+    <Content Include="Scripts\select2\js\i18n\hi.js" />
+    <Content Include="Scripts\select2\js\i18n\hi.min.js" />
+    <Content Include="Scripts\select2\js\i18n\hr.js" />
+    <Content Include="Scripts\select2\js\i18n\hr.min.js" />
+    <Content Include="Scripts\select2\js\i18n\hsb.js" />
+    <Content Include="Scripts\select2\js\i18n\hsb.min.js" />
+    <Content Include="Scripts\select2\js\i18n\hu.js" />
+    <Content Include="Scripts\select2\js\i18n\hu.min.js" />
+    <Content Include="Scripts\select2\js\i18n\hy.js" />
+    <Content Include="Scripts\select2\js\i18n\hy.min.js" />
+    <Content Include="Scripts\select2\js\i18n\id.js" />
+    <Content Include="Scripts\select2\js\i18n\id.min.js" />
+    <Content Include="Scripts\select2\js\i18n\is.js" />
+    <Content Include="Scripts\select2\js\i18n\is.min.js" />
+    <Content Include="Scripts\select2\js\i18n\it.js" />
+    <Content Include="Scripts\select2\js\i18n\it.min.js" />
+    <Content Include="Scripts\select2\js\i18n\ja.js" />
+    <Content Include="Scripts\select2\js\i18n\ja.min.js" />
+    <Content Include="Scripts\select2\js\i18n\ka.js" />
+    <Content Include="Scripts\select2\js\i18n\ka.min.js" />
+    <Content Include="Scripts\select2\js\i18n\km.js" />
+    <Content Include="Scripts\select2\js\i18n\km.min.js" />
+    <Content Include="Scripts\select2\js\i18n\ko.js" />
+    <Content Include="Scripts\select2\js\i18n\ko.min.js" />
+    <Content Include="Scripts\select2\js\i18n\lt.js" />
+    <Content Include="Scripts\select2\js\i18n\lt.min.js" />
+    <Content Include="Scripts\select2\js\i18n\lv.js" />
+    <Content Include="Scripts\select2\js\i18n\lv.min.js" />
+    <Content Include="Scripts\select2\js\i18n\mk.js" />
+    <Content Include="Scripts\select2\js\i18n\mk.min.js" />
+    <Content Include="Scripts\select2\js\i18n\ms.js" />
+    <Content Include="Scripts\select2\js\i18n\ms.min.js" />
+    <Content Include="Scripts\select2\js\i18n\nb.js" />
+    <Content Include="Scripts\select2\js\i18n\nb.min.js" />
+    <Content Include="Scripts\select2\js\i18n\ne.js" />
+    <Content Include="Scripts\select2\js\i18n\ne.min.js" />
+    <Content Include="Scripts\select2\js\i18n\nl.js" />
+    <Content Include="Scripts\select2\js\i18n\nl.min.js" />
+    <Content Include="Scripts\select2\js\i18n\pl.js" />
+    <Content Include="Scripts\select2\js\i18n\pl.min.js" />
+    <Content Include="Scripts\select2\js\i18n\ps.js" />
+    <Content Include="Scripts\select2\js\i18n\ps.min.js" />
+    <Content Include="Scripts\select2\js\i18n\pt-BR.js" />
+    <Content Include="Scripts\select2\js\i18n\pt-BR.min.js" />
+    <Content Include="Scripts\select2\js\i18n\pt.js" />
+    <Content Include="Scripts\select2\js\i18n\pt.min.js" />
+    <Content Include="Scripts\select2\js\i18n\ro.js" />
+    <Content Include="Scripts\select2\js\i18n\ro.min.js" />
+    <Content Include="Scripts\select2\js\i18n\ru.js" />
+    <Content Include="Scripts\select2\js\i18n\ru.min.js" />
+    <Content Include="Scripts\select2\js\i18n\sk.js" />
+    <Content Include="Scripts\select2\js\i18n\sk.min.js" />
+    <Content Include="Scripts\select2\js\i18n\sl.js" />
+    <Content Include="Scripts\select2\js\i18n\sl.min.js" />
+    <Content Include="Scripts\select2\js\i18n\sq.js" />
+    <Content Include="Scripts\select2\js\i18n\sq.min.js" />
+    <Content Include="Scripts\select2\js\i18n\sr-Cyrl.js" />
+    <Content Include="Scripts\select2\js\i18n\sr-Cyrl.min.js" />
+    <Content Include="Scripts\select2\js\i18n\sr.js" />
+    <Content Include="Scripts\select2\js\i18n\sr.min.js" />
+    <Content Include="Scripts\select2\js\i18n\sv.js" />
+    <Content Include="Scripts\select2\js\i18n\sv.min.js" />
+    <Content Include="Scripts\select2\js\i18n\th.js" />
+    <Content Include="Scripts\select2\js\i18n\th.min.js" />
+    <Content Include="Scripts\select2\js\i18n\tk.js" />
+    <Content Include="Scripts\select2\js\i18n\tk.min.js" />
+    <Content Include="Scripts\select2\js\i18n\tr.js" />
+    <Content Include="Scripts\select2\js\i18n\tr.min.js" />
+    <Content Include="Scripts\select2\js\i18n\uk.js" />
+    <Content Include="Scripts\select2\js\i18n\uk.min.js" />
+    <Content Include="Scripts\select2\js\i18n\vi.js" />
+    <Content Include="Scripts\select2\js\i18n\vi.min.js" />
+    <Content Include="Scripts\select2\js\i18n\zh-CN.js" />
+    <Content Include="Scripts\select2\js\i18n\zh-CN.min.js" />
+    <Content Include="Scripts\select2\js\i18n\zh-TW.js" />
+    <Content Include="Scripts\select2\js\i18n\zh-TW.min.js" />
+    <Content Include="Scripts\select2\js\select2.full.js" />
+    <Content Include="Scripts\select2\js\select2.full.min.js" />
+    <Content Include="Scripts\select2\js\select2.js" />
+    <Content Include="Scripts\select2\js\select2.min.js" />
+    <Content Include="wwwroot\css\app-modal.css" />
+    <Content Include="wwwroot\css\app.css" />
+    <Content Include="wwwroot\css\glyphicon.css" />
+    <Content Include="wwwroot\css\responsive.css" />
+    <Content Include="wwwroot\css\site.css" />
+    <Content Include="wwwroot\js\app-feedback.js" />
+    <Content Include="wwwroot\js\app-modal.js" />
+    <Content Include="wwwroot\js\app.js" />
+    <Content Include="wwwroot\js\site.js" />
+    <Content Include="wwwroot\js\Views\livro.js" />
+    <Content Include="wwwroot\js\Views\emprestimo.js" />
+    <Content Include="wwwroot\js\Views\usuario.js" />
+    <Content Include="libman.json" />
+    <Content Include="Scripts\bootstrap-datepicker\css\bootstrap-datepicker.css.map" />
+    <Content Include="Scripts\bootstrap-datepicker\css\bootstrap-datepicker.standalone.css.map" />
+    <Content Include="Scripts\bootstrap-datepicker\css\bootstrap-datepicker3.css.map" />
+    <Content Include="Scripts\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.css.map" />
+    <Content Include="Scripts\font-awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="Scripts\font-awesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="Scripts\font-awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="Scripts\font-awesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="Scripts\font-awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="Scripts\font-awesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="Scripts\font-awesome\webfonts\fa-v4compatibility.ttf" />
+    <Content Include="Scripts\font-awesome\webfonts\fa-v4compatibility.woff2" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\jquery-validation\LICENSE.md" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Livro\Index.cshtml" />
+    <Content Include="Views\Usuario\PopupUsuario.cshtml" />
+    <Content Include="Scripts\moment.js\moment-with-locales.min.js.map" />
+    <Content Include="Scripts\moment.js\moment.min.js.map" />
+    <Content Include="Scripts\jquery\dist\jquery.min.map" />
+    <Content Include="Views\Usuario\PopupDetalhesUsuario.cshtml" />
+    <Content Include="Views\Usuario\_Endereco.cshtml" />
+    <Content Include="Views\Livro\Create.cshtml" />
+    <Content Include="Views\Livro\PopupLivro.cshtml" />
+    <Content Include="Views\Livro\PopupEmprestarLivro.cshtml" />
+    <Content Include="Views\Livro\_ConsultaEmprestimo.cshtml" />
+    <Content Include="Views\Emprestimo\Index.cshtml" />
+    <Content Include="Views\Livro\PopupDetalhesLivro.cshtml" />
+    <Content Include="Views\Livro\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaBiblioteca.Business\SistemaBiblioteca.Business.csproj">
+      <Project>{D942B8CC-3F9E-4FAD-8D2C-4E08B4D00C0F}</Project>
+      <Name>SistemaBiblioteca.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemaBiblioteca.Infra\SistemaBiblioteca.Infra.csproj">
+      <Project>{364C1C7A-70E6-4F4E-B932-368CAC40C5BA}</Project>
+      <Name>SistemaBiblioteca.Infra</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54055</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44397/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+	      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <!-- <Error Condition="!Exists('..\..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" /> -->
+    <!-- <Error Condition="!Exists('..\..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" /> -->
+    <Error Condition="!Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- <Import Project="..\..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" /> -->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Lista de Emprestimos";
+}
+
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+@section Javascript
+{
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.11.3/datatables.min.js"></script>
+    <script src="~/wwwroot/js/Views/emprestimo.js"></script>
+}
+
+<div class="col-xs-12">
+    <hr />
+    <div id="div-grid">
+        <div class="card-header">
+            <h3 class="card-title titulo-bloco legenda-tabela">Resultado da busca por empréstimos.</h3>
+            <hr />
+        </div>
+        <div class="card-body">
+            <div class="content-box content-box-tabela">
+                <table class="tabela-padrao tabela-padrao-borda table table-bordered table-striped" id="tblEmprestimo" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="text-center col-sm-12 col-md-2">ID</th>
+                            <th class="text-center col-sm-12 col-md-5">Usuário</th>
+                            <th class="text-center col-sm-12 col-md-5">Descrição</th>
+                            <th class="text-center col-sm-12 col-md-5">Data Retirada</th>
+                            <th class="text-center col-sm-12 col-md-5">Data Devolução</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

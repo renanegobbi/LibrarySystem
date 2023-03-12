@@ -1,0 +1,41 @@
+﻿<div id="areaConsultaEmprestimo">
+    <table class="table table-details" style="margin-bottom:-20px;">
+        <tbody>
+            <tr>
+                <th><h4>Consulta</h4></th>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <table class="table table-details" style="margin-bottom:-5px;">
+        <tbody>
+            <tr>
+                <th style="width: 10%; border-top: none;">CPF:</th>
+                <td style="width: 80%; border-top: none;">
+                    <input type="text" class="form-control somenteNumero" id="iCpfUsuario" name="iCpfUsuario" value="" />
+                </td>
+                <td style="width: 10%; border-top: none;">
+                    <button class="btn btn-sm btn-warning" id="btn-consultar">
+                        <i class="fa fa-search mr-xs"></i> consultar
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <div id="div-grid">
+        <div class="card-body">
+            <div class="content-box content-box-tabela">
+                <table class="tabela-padrao tabela-padrao-borda table table-bordered table-striped" id="tblConsultaUsuario" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="text-center col-sm-12 col-md-7">Nome</th>
+                            <th class="text-center col-sm-12 col-md-5">CPF</th>
+                            <th class="text-center" style="width:1px;"></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

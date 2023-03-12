@@ -1,0 +1,51 @@
+﻿@using SistemaBiblioteca.App.Mvc.Helpers
+@model SistemaBiblioteca.App.Mvc.ViewModels.UsuarioViewModel
+
+@{
+    var cadastro = Model == null || Model.Nome == null;
+}
+
+<div class="modal-block modal-block-primary app-modal-md modal-header-color">
+    <section class="panel">
+        <header class="panel-heading" style="background-color: #035785; margin: -1.5px;">
+            <h2 class="panel-title" style="color:white">@(cadastro ? "Cadastrar" : "Alterar")</h2>
+        </header>
+        <div class="panel-body">
+            <input type="hidden" id="iIdUsuario" value="@if(!cadastro){@Model.Id}" />
+            <form id="form-manter-usuario" class="form-group" style="margin-bottom:0;">
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <label class="control-label">Nome</label> @CustomHtmlHelper.CampoObrigatorio("iNomeUsuario")
+                        <input type="text" class="form-control" id="iNomeUsuario" name="iNomeUsuario" value="@if(!cadastro){@Model.Nome}" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <label class="control-label">CPF</label> @CustomHtmlHelper.CampoObrigatorio("iCpfUsuario")
+                        <input type="text" class="form-control somenteNumero" id="iCpfUsuario" name="iCpfUsuario" value="@if(!cadastro){@Model.Cpf}" />
+                    </div>
+                </div>
+
+                <h4>Endereço</h4>
+                <hr />
+
+                @Html.Partial("_Endereco")
+
+            </form>
+        </div>
+
+        <footer class="panel-footer">
+            <div class="row">
+                <div class="col-sm-12 text-right">
+                    <button class="btn btn-sm btn-default btn-fechar">
+                        <i class="fa fa-times mr-xs"></i> Fechar
+                    </button>
+                    <button class="btn btn-sm btn-primary" id="btn-salvar">
+                        <i class="fa fa-save mr-xs"></i> Salvar
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </section>
+</div>
+

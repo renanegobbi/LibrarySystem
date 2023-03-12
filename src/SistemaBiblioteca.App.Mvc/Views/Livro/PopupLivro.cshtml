@@ -1,0 +1,95 @@
+﻿@using SistemaBiblioteca.App.Mvc.Helpers
+@model SistemaBiblioteca.App.Mvc.ViewModels.LivroViewModel
+
+@{
+    var cadastro = Model == null || Model.Titulo == null;
+    var maxCaracter = 1000;
+}
+
+<div class="modal-block modal-block-primary app-modal-md modal-header-color">
+    <section class="panel">
+        <header class="panel-heading" style="background-color: #035785; margin: -1.5px;">
+            <h2 class="panel-title" style="color:white">@(cadastro ? "Cadastrar" : "Alterar")</h2>
+        </header>
+        <div class="panel-body">
+            <input type="hidden" id="iIdLivro" value="@if (!cadastro) {@Model.Id}" />
+            @using (Html.BeginForm("CadastrarLivro", "Livro", FormMethod.Post, new { enctype = "multipart/form-data", OnSuccess = "validateForm(event)", id = "form-manter-livro" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <label class="control-label">Imagem</label> @CustomHtmlHelper.CampoObrigatorio("Imagem")
+                        <div class="input-group">
+                            <input type="text" name="Imagem" id="Imagem" class="form-control" value="@if (!cadastro)
+                            {@Model.Imagem}">
+                            <span class="input-group-btn">
+                                <label class="btn btn-primary" for="ImagemUpload">
+                                    <input class="form-control" id="ImagemUpload" name="ImagemUpload" type="file" style="display: none"
+                                           onchange="$('#Imagem').val(this.files[0].name); $('#ImagemUpload').blur();" value="@if (!cadastro)
+                                           {@Model.ImagemUpload}">
+                                    <span class="glyphicon glyphicon-cloud-upload"></span>
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <label class="control-label">Título</label> @CustomHtmlHelper.CampoObrigatorio("Titulo")
+                        <input type="text" class="form-control" id="Titulo" name="Titulo" value="@if (!cadastro)
+                        {@Model.Titulo}" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <label class="control-label">Descrição</label> @CustomHtmlHelper.CampoObrigatorio("Descricao")
+                        <textarea maxlength="1000" rows="5" id="Descricao" name="Descricao" class="form-control campo-digitacao">@if (!cadastro){@Model.Descricao}</textarea>
+                        <span asp-validation-for="Descricao" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        Caracteres restantes: <span id="contador-caracteres">@(!cadastro ? maxCaracter - Model.Descricao.Length : maxCaracter)</span>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <label class="control-label">Editora</label> @CustomHtmlHelper.CampoObrigatorio("Editora")
+                        <input type="text" class="form-control" id="Editora" name="Editora" value="@if (!cadastro)
+                        {@Model.Editora}" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group datapicker" style="z-index: 19001;">
+                            <label class="control-label">Data de publicação</label> @CustomHtmlHelper.CampoObrigatorio("AnoPublicacao")
+                            <div class="input-group flex-nowrap date" data-provide="datepicker">
+                                <input class="form-control" placeholder="" id="AnoPublicacao" name="AnoPublicacao" value="@if (!cadastro){@Model.AnoPublicacao.ToString("dd/MM/yyyy")}">
+                                <span class="input-group-btn">
+                                    <label class="btn btn-primary" for="AnoPublicacao">
+                                        <input class="form-control" style="display: none">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <footer class="panel-footer">
+            <div class="row">
+                <div class="col-sm-12 text-right">
+                    <button class="btn btn-sm btn-default btn-fechar">
+                        <i class="fa fa-times mr-xs"></i> Fechar
+                    </button>
+                    <button class="btn btn-sm btn-primary" id="btn-salvar">
+                        <i class="fa fa-save mr-xs"></i> Salvar
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </section>
+</div>

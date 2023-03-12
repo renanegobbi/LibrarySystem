@@ -1,0 +1,70 @@
+﻿@using SistemaBiblioteca.App.Mvc.Extensions
+@model SistemaBiblioteca.App.Mvc.ViewModels.LivroViewModel
+
+@{
+    ViewBag.Title = "Lista de Livros";
+}
+
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+@section LibJavascript
+{
+    <script src="~/Scripts/moment.js/moment.min.js"></script>
+    <script src="~/Scripts/moment.js/locale/pt-br.min.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+}
+
+@section Javascript
+{
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.11.3/datatables.min.js"></script>
+    <script src="~/wwwroot/js/Views/livro.js"></script>
+}
+
+@{
+    var permissaoExcluirLivro = Model.PermissoaExclusaoLivro;
+}
+
+<div class="col-xs-12">
+    <hr />
+    <div id="div-grid">
+        <div class="card-header">
+            <h3 class="card-title titulo-bloco legenda-tabela">Resultado da busca por livros.</h3>
+            <hr />
+        </div>
+        <input type="hidden" id="iPermissao" value="@permissaoExcluirLivro" />
+        @{
+            if (this.PermitirExibicao("Administrador", "Adicionar"))
+            {
+                <div class="row">
+
+
+                    <div class="col-sm-6 form-group">
+                        <button type="submit" class="btn btn-sm btn-success tooltip-right cadastrar-livro" id="btn-cadastrar" data-tooltip="Cadastrar">
+                            <i class="fa fa-plus fa-fw"></i>
+                        </button>
+                    </div>
+                </div>
+            }
+        }
+        <div class="card-body">
+            <div class="content-box content-box-tabela">
+                <table class="tabela-padrao tabela-padrao-borda table table-bordered table-striped" id="tblLivro" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="text-center col-sm-12 col-md-2">Imagem</th>
+                            <th class="text-center col-sm-12 col-md-5">Título</th>
+                            <th class="text-center col-sm-12 col-md-5">Descrição</th>
+                            <th class="text-center" style="width:1px;"></th>
+                            <th class="text-center" style="width:1px;"></th>
+                            <th class="text-center" style="width:1px;"></th>
+                            <th class="text-center" style="width:1px;"></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

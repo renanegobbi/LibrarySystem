@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "jquery.blockUI@2.70",
+      "destination": "Scripts/jquery.blockUI/"
+    },
+    {
+      "library": "jquery-confirm@3.3.4",
+      "destination": "Scripts/jquery-confirm/"
+    },
+    {
+      "library": "datepicker@1.0.10",
+      "destination": "Scripts/datepicker/"
+    }
+  ]
+}

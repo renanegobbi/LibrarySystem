@@ -1,0 +1,93 @@
+﻿@using SistemaBiblioteca.App.Mvc.Extensions
+@model SistemaBiblioteca.App.Mvc.ViewModels.UsuarioViewModel
+
+<div class="modal-block modal-block-primary app-modal-md modal-header-color">
+    <section class="panel">
+        <header class="panel-heading" style="background-color: #035785; margin: -1.5px;">
+            <h2 class="panel-title" style="color:white">Detalhes</h2>
+        </header>
+        <div class="panel-body">
+            <div id="form-manter-usuario" class="form-group">
+                <table class="table table-details" style="margin-bottom:-5px;">
+                    <tbody>
+                        <tr>
+                            <th style="width: 20%; border-top: none;">Nome:</th>
+                            <td>
+                                @Model.Nome
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>CPF:</th>
+                            <td>
+                                @this.FormatarCpf(@Model.Cpf)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-details" style="margin-bottom:-20px;">
+                    <tbody>
+                        <tr>
+                            <th><h4>Endereço</h4></th>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr />
+                <table class="table table-details" style="margin-bottom:-5px;">
+                    <tbody>
+                        <tr>
+                            <th style="width: 10%; border-top: none;">Cep:</th>
+                            <td>
+                                @this.FormatarCep(Model.Endereco.Cep)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Logradouro:</th>
+                            <td>
+                                @Model.Endereco.Logradouro
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Número:</th>
+                            <td>
+                                @Model.Endereco.Numero
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Complemento:</th>
+                            <td>
+                                @Model.Endereco.Complemento
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Bairro:</th>
+                            <td>
+                                @Model.Endereco.Bairro
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Cidade:</th>
+                            <td>
+                                @Model.Endereco.Cidade
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Estado:</th>
+                            <td>
+                                @Model.Endereco.Estado
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <footer class="panel-footer">
+            <div class="row">
+                <div class="col-sm-12 text-right">
+                    <button class="btn btn-sm btn-default btn-fechar">
+                        <i class="fa fa-times mr-xs"></i> Fechar
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </section>
+</div>
