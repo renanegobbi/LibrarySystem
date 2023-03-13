@@ -84,10 +84,10 @@ git clone https://github.com/renanegobbi/SistemaBiblioteca.git
 Após executar a aplicação, insira a seguinte url para visualizar no browser:   
 
 OBS:
-* Ao executar pela primeira vez, caso não encontre o caminho <em>... bin\roslyn\csc.exe</em>, executar no console do gerenciador de pacotes (Package Manager Console):
+* Ao executar pela primeira vez, caso a solução não encontre o caminho <em>... bin\roslyn\csc.exe</em>, executar no console do gerenciador de pacotes (Package Manager Console):
   <strong>Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r</strong>
-* Ao executar pela primeira vez, criará o banco de dados se o mesmo não existir e populará as tabelas do banco de dados, conforme descrito na classe DatabaseInitializer.cs.
-* Caso queira criar o banco de dados de forma manual, o scrip se encontra na pasta <em>sql</em> desta solução.
+* Ao executar pela primeira vez, criará o banco de dados, se o mesmo não existir, e populará as tabelas do banco de dados, conforme descrito na classe DatabaseInitializer.cs.
+* Caso queira criar o banco de dados de forma manual, o scrip se encontra na pasta <em>sql</em> deste projeto.
 ```
 https://localhost:44397/
 ```
