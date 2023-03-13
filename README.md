@@ -56,19 +56,19 @@ Abaixo, está o diagrama do banco de dados utilizado neste projeto:
 
 # Demonstração
 
-A figura abaixo mostra a visualização do modal para reazlizar o empréstimo de um livro a um usuário cadastrado no sistema.
+A figura abaixo mostra a visualização do modal para realizar o empréstimo de um livro a um usuário cadastrado no sistema.
 
 <p align="center">
   <img src="https://github.com/renanegobbi/SistemaBiblioteca/blob/main/docs/prints/livro_popup_emprestimo.png"/>
 </p>
 
-A figura abaixo ilustra a tela de edição do usuário pertencente ao grupo de pessoas que poderá realizar o empréstimo.
+A figura abaixo ilustra a tela de edição do usuário pertencente ao grupo de funcionários que poderão realizar os empréstimos.
 
 <p align="center">
   <img src="https://github.com/renanegobbi/SistemaBiblioteca/blob/main/docs/prints/usuario_popup_edicao.png"/>
 </p>
 
-A figura abaixo ilustra a lista de empréstimos, relacionando ao usuário o livro emprestado, assim como a a data de retirada e devolução deste livro.
+A figura abaixo ilustra a lista de empréstimos, relacionando ao usuário a descrição do livro emprestado, assim como a a data de retirada e devolução deste livro.
 
 <p align="center">
   <img src="https://github.com/renanegobbi/SistemaBiblioteca/blob/main/docs/prints/emprestimos_lista.png"/>
@@ -82,15 +82,15 @@ git clone https://github.com/renanegobbi/SistemaBiblioteca.git
 ```         
 
 Após executar a aplicação, insira a seguinte url para visualizar no browser:   
-
-OBS:
+```
+https://localhost:44397/
+```
+<strong>OBS:</strong>
 * Ao executar pela primeira vez, caso a solução não encontre o caminho <em>... bin\roslyn\csc.exe</em>, executar no console do gerenciador de pacotes (Package Manager Console):
   <strong>Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r</strong>
 * Ao executar pela primeira vez, criará o banco de dados, se o mesmo não existir, e populará as tabelas do banco de dados, conforme descrito na classe DatabaseInitializer.cs.
 * Caso queira criar o banco de dados de forma manual, o scrip se encontra na pasta <em>sql</em> deste projeto.
-```
-https://localhost:44397/
-```
+
 
 # Licença
 Este projeto está sob a licença do MIT. Consulte a [LICENÇA](https://github.com/TesteReteste/lim/blob/master/LICENSE) para obter mais informações.
