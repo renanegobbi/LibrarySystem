@@ -42,7 +42,7 @@ A aplicação foi criada pensando que quem realizará o empréstimo será soment
 
 O sistema conta com autorização baseada em claims. Inicialmente, o seed se encarregará de criar dois funcionários na tabela AspNetUsers, um com perfil de Administrador, capaz de visualizar os botões de cadastro e exclução das telas, e um funcionário sem permissão para cadastrar e excluir. As claims que os usuários possuem estão na tabela AspNetUserClaims. A tabela abaixo mostra os dois funcionários criados pelo preenchimento dos dados iniciais.
 
-Nome | Senha | perfil administrador | ClaimType | ClaimValue
+Nome | Senha | Perfil Administrador | ClaimType | ClaimValue
 :--------- | :------ | :-------: | :------ | :-------                                  
 func@email.com | Func@123 | não | Funcionario | Ler,Atualizar
 admin@email.com | Admin@123 | sim | Administrador | Ler,Adicionar,Atualizar,Excluir
