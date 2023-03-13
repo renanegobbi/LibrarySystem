@@ -40,12 +40,12 @@ Ao executar pela primeira vez, caso não crie o banco de dados pelo arquivo scri
 
 A aplicação foi criada pensando que quem realizará o empréstimo será somente funcionário (com ou sem a permissão de administrador).
 
-O sistema conta com autorização baseada em claims. Inicialmente, o seed se encarregará de criar dois funcionários na tabela AspNetUsers, um com perfil de Administrador, capaz de visualizar os botões de cadastro e exclução das telas, e um funcionário sem permissão para cadastrar e excluir.
+O sistema conta com autorização baseada em claims. Inicialmente, o seed se encarregará de criar dois funcionários na tabela AspNetUsers, um com perfil de Administrador, capaz de visualizar os botões de cadastro e exclução das telas, e um funcionário sem permissão para cadastrar e excluir. As claims que os usuários possuem estão na tabela AspNetUserClaims.
 
-Nome | Senha | perfil administrador
-:--------- | :------ | :-------:
-func@email.com | Func@123 | não
-admin@email.com | Admin@123 | sim
+Nome | Senha | perfil administrador | ClaimType | ClaimValue
+:--------- | :------ | :-------: | :------ | :-------                                  
+func@email.com | Func@123 | não | Funcionario | Ler,Atualizar
+admin@email.com | Admin@123 | sim | Administrador | Ler,Adicionar,Atualizar,Excluir
 
 Abaixo, está o diagrama do banco de dados utilizado neste projeto:
 
