@@ -36,7 +36,7 @@ O projeto foi desenvolvido com as seguintes tecnologias e ferramentas:
 
 Este projeto, para fins de estudo, permite listar, consultar, detalhar, cadastrar, alterar e deletar tanto usuário quanto livro. A tela de empréstimo permite listar a situação de cada empréstimo do livro ao usuário e acompanhar o histórico de data de retirada e devolução deste livro.    
 
-Ao executar pela primeira vez, caso não crie o banco de dados pelo arquivo script.sql, que se encontra dentro da pasta sql, o Entity Framework se encarregará de criar o banco de dados e realizar o Seed Data (preenchimento de suas tabelas com dados iniciais).
+Ao executar pela primeira vez, caso não crie o banco de dados pelo arquivo script.sql, que se encontra dentro da pasta sql, o Entity Framework se encarregará de criar o banco de dados e realizar o Seed Data (preenchimento de suas tabelas com dados iniciais), como descrito na classe DatabaseInitializer.cs.
 
 A aplicação foi criada pensando que quem realizará o empréstimo será somente funcionário (com ou sem a permissão de administrador).
 
