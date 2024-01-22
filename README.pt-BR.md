@@ -1,7 +1,7 @@
 
 # Sistema Biblioteca
 
-<a href="https://github.com/renanegobbi/SistemaBiblioteca/README.md">Read this page in English</a> <img alt="English" src="https://github.com/renanegobbi/TesteMarkdown/blob/main/Flag_of_the_United_States.svg" width="30" height="30"> 
+<a href="https://github.com/renanegobbi/SistemaBiblioteca/blob/main/README.md">Read this page in English</a> <img alt="English" src="https://github.com/renanegobbi/TesteMarkdown/blob/main/Flag_of_the_United_States.svg" width="30" height="30"> 
 :---------
 
 Projeto simples de um sistema de biblioteca, desenvolvido para fins de estudo de funcionalidades da tecnologia .NET Framework 4.8.
