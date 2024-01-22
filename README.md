@@ -1,6 +1,6 @@
 # Library System
 
-<a href="https://github.com/renanegobbi/SistemaBiblioteca/edit/main/README.pt-BR.md">Leia esta página em Português</a> <img alt="English" src="https://user-images.githubusercontent.com/64235143/225525114-8e2210f2-915e-405d-9879-354d7a8dc78a.png" width="30" height="30"> 
+<a href="https://github.com/renanegobbi/SistemaBiblioteca/blob/main/README.pt-BR.md">Leia esta página em Português</a> <img alt="English" src="https://user-images.githubusercontent.com/64235143/225525114-8e2210f2-915e-405d-9879-354d7a8dc78a.png" width="30" height="30"> 
 :---------
 
 Simple project of a library system, developed for the purpose of studying the functionalities of the .NET Framework 4.8 technology.
